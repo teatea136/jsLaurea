@@ -3,7 +3,10 @@
 	<head>
 		<title>Workshop 4</title>
 		<meta charset="utf-8">
-		<link rel="stylesheet" href="css/styles.css">
+		<link rel="stylesheet" href="./styles.css">
+        <script src="./script.js" async>
+            <!-- JavaScript goes here -->
+        </script>
 	</head>
 	<body class="ws4">
 		<h1>Workshop 4: DOM Scripting</h1>
@@ -14,9 +17,9 @@
 		<h2>Exercise 1: Basic  DOM Manipulation</h2>
 		<p>&nbsp;Below you will see three buttons. Edit the source code and add an onClick-events to these buttons. Use Developer Console to find the </p>
 		<p>
-		  <button onclick="changeHeading();">Button 1</button>
-		  <button onclick="secondButton">Button 2</button>
-		  <button onclick="">Button 3</button>
+		  <button onclick="changeHeading()">Button 1</button>
+		  <button onclick="secondButton()">Button 2</button>
+		  <button onclick="thirdButton()">Button 3</button>
 		</p>
 
 		<ul>
@@ -41,8 +44,8 @@
 			</label>
 			<br>
 			<label>
-				<input type="checkbox" name="CheckboxGroup1" value="3" id="CheckboxGroup1_2"> 
-				<span id="surpise">Surprise</span>
+				<input onchange="sup()" type="checkbox" name="CheckboxGroup1" value="3" id="CheckboxGroup1_2"> 
+				<span class="surprise">Surprise (tää tehtävä on täynnä typoja, id oli surPISE ja ei ollu class niinkuin tehtävänannossa lukee vaan id)</span>
 			</label>
 		</p>
 		<ul>
@@ -60,7 +63,7 @@
 				<li>When you have accomplished the above, change the image (id=&quot;carimage&quot;) below based on the users choice on the pulldown menu below. Find appropriate images from the web.
 			</ul>
 		  <p>Select a new car from the list.</p>
-		  <select name="mySelect" id="mySelect" onchange="">
+		  <select name="mySelect" id="mySelect" onchange="pudotus()">
 			<option value="BMW">BMW         
 			<option value="Audi">Audi
 			<option value="Mercedes">Mercedes
@@ -68,7 +71,7 @@
 		  </select>
 		  <br>
 		  <br>
-		<img alt="" onmouseover="" onmouseout="" style="left: 0px; opacity: 1;" src="https://www.bmw.fi/content/dam/bmw/common/all-models/m-series/m8-coupe/2022/navigation/bmw-8series-coupe-modellfinder.png" width="400" id="carimage"/>
+		<img alt="" onmouseover="mouseover()" onmouseout="mouseout()" style="left: 0px; opacity: 1;" src="https://www.bmw.fi/content/dam/bmw/common/all-models/m-series/m8-coupe/2022/navigation/bmw-8series-coupe-modellfinder.png" width="400" id="carimage"/>
 		<hr/>
 		<h2>Exercise 4: Moving things around</h2>
 		<ul>
